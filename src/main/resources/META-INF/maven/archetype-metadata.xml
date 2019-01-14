@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="this is archetype">
+    <fileSets>
+        <!--fileSet对应一个目录以及该目录相关的包含或排除规则-->
+        <!--filtered表示是否对该文件及合应用属性替换，像${x}这样的内容是否替换成命令行输入的x参数的值-->
+        <!--packaged表示是否将该目录下的内容放到生成项目的包路径下-->
+        <fileSet filtered="true" packaged="true">
+            <!--src/main/java对应archetype-resources/src/main/java-->
+            <directory>src/main/java</directory>
+            <!--只包含archetype-resources/src/main/java下的.java文件-->
+            <include>**/*.java</include>
+        </fileSet>
+
+        <!--resources一般没有包路径，所以packaged设置为false-->
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/resources</directory>
+            <!--<include>**/*.properties</include>-->
+        </fileSet>
+        <!--.idea一般没有包路径，所以packaged设置为false-->
+        <fileSet filtered="true" packaged="false">
+            <directory>.idea</directory>
+            <include>**/*.*</include>
+        </fileSet>
+        <fileSet filtered="false" packaged="false">
+            <directory>./</directory>
+            <include>.gitignore</include>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>src/test/java</directory>
+            <include>**/*.java</include>
+        </fileSet>
+    </fileSets>
+
+    <requiredProperties>
+        <requiredProperty key="dbHost">
+            <defaultValue>127.0.0.1</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="dbPort">
+            <defaultValue>3306</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="dbName">
+            <defaultValue>test</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="dbUser">
+            <defaultValue>root</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="dbPassword">
+            <defaultValue>123456</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="port">
+            <defaultValue>8080</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="groupId"/>
+    </requiredProperties>
+</archetype-descriptor>
