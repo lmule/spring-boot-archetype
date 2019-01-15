@@ -1,6 +1,5 @@
-#!/bin/bash
 
-easy_code_setting="$HOME/Library/Preferences/IntelliJIdea*/options/easy-code-setting.xml"
+SET easy_code_setting="$HOME/Library/Preferences/IntelliJIdea*/options/easy-code-setting.xml"
 if [ ! -f "$easy_code_setting" ]; then 
     echo "正在下载easy-code-setting.xml"
     wget -P $HOME/Library/Preferences/IntelliJIdea*/options https://raw.githubusercontent.com/lmule/spring-boot-archetype/master/easy-code-setting.xml 
