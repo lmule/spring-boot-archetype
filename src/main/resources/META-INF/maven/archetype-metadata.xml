@@ -21,9 +21,11 @@
             <directory>.idea</directory>
             <include>**/*.*</include>
         </fileSet>
-        <fileSet filtered="false" packaged="false">
-            <directory>./</directory>
-            <include>.gitignore</include>
+        <fileSet>
+            <directory></directory>
+            <includes>
+                <include>.gitignore</include>
+            </includes>
         </fileSet>
         <fileSet filtered="true" packaged="true">
             <directory>src/test/java</directory>

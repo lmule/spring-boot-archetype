@@ -25,11 +25,11 @@ magic80-cli() {
                 shift;
                 version=$1;
                 shift;;
-            -artifactid)
+            -artifactId)
                 shift;
                 artifactId=$1;
                 shift;;
-            -groupid)
+            -groupId)
                 shift;
                 groupId=$1;
                 shift;;
